@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('content'); // ツイート本文
             $table->string('image_path')->nullable(); // 添付画像（任意）
             $table->tinyInteger('is_deleted')->default(0); // 削除フラグ: 0=表示, 1=削除, 2=シャドウバン
+            $table->integer('retweet_count')->default(0); // リツイート数
             $table->timestamps();
         });
     }
