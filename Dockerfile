@@ -23,3 +23,5 @@ COPY . .
 RUN composer install
 
 CMD ["php-fpm"]
+
+COPY ./docker/php.ini /usr/local/etc/php/php.ini
